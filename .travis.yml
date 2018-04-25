@@ -1,6 +1,16 @@
 language: android
-jdk: oraclejdk7
+jdk: oraclejdk8
 
 android:
   components:
-    - build-tools-19.0.1
+    # Update Android SDK Tools
+    - tools
+
+    - build-tools-23.0.1
+    - android-23
+
+    # Support library
+    - extra-android-support
+    - extra-android-m2repository
+  script:
+  - chmod +x ./gradlew
