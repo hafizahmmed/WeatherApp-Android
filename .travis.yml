@@ -1,16 +1,11 @@
 language: android
-jdk: oraclejdk8
-
 android:
   components:
-    # Update Android SDK Tools
-    - tools
+    - tools # to get the new `repository-11.xml`
+    - tools # see https://github.com/travis-ci/travis-ci/issues/6040#issuecomment-219367943)
+    - platform-tools
+    - build-tools-26.0.1
+    - android-26
 
-    - build-tools-23.0.1
-    - android-23
-
-    # Support library
-    - extra-android-support
-    - extra-android-m2repository
-  script:
-  - chmod +x ./gradlew
+script:
+   - ./gradlew build connectedCheck
