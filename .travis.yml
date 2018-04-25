@@ -11,3 +11,6 @@ android:
 
 script:
    - ./gradlew build connectedCheck
+   
+licenses:
+  - '.+'
