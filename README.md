@@ -7,8 +7,8 @@
 [![GitHub forks](https://img.shields.io/github/forks/Luuk2016/WeatherApp-Android.svg)](https://github.com/Luuk2016/WeatherApp-Android/network)
 
 ### About
-This Android will/has been made for a school project where we had to learn (more) about Android programming.
+This Android will been made for a school project where we had to learn (more) about Android programming.
 
 ### Authors
 
-Build with ❤︎ by <a href="https://www.luukkenselaar.nl/">Luuk Kenselaar</a> and <a href="https://github.com/Bjornzor">Bjorn</a>
+Build with ❤ by <a href="https://www.luukkenselaar.nl/">Luuk Kenselaar</a> and <a href="https://github.com/Bjornzor">Bjorn</a>
