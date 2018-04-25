@@ -1,5 +1,14 @@
 sudo: false
 language: android
+before_install:
+ - chmod +x gradlew
+
+before_script:
+# Create and start emulator.
+  - echo no | android create avd --force -n test -t "android-"$ANDROID_EMULATOR_LEVEL --abi $ANDROID_ABI --tag $ANDROID_TAG
+  - emulator -avd test -no-window &
+  - android-wait-for-emulator
+  - adb shell input keyevent 82 &
 
 android:
   components:
@@ -11,18 +20,17 @@ android:
     - android-$ANDROID_EMULATOR_LEVEL
     - sys-img-armeabi-v7a-google_apis-$ANDROID_EMULATOR_LEVEL
 
+script:
+   - ./gradlew build connectedCheck
+
 licenses:
   - '.+'
-  
-before_install:
- - chmod +x gradlew
- 
-before_script:
-# Create and start emulator.
-  - echo no | android create avd --force -n test -t "android-"$ANDROID_EMULATOR_LEVEL --abi $ANDROID_ABI --tag $ANDROID_TAG
-  - emulator -avd test -no-window &
-  - android-wait-for-emulator
-  - adb shell input keyevent 82 &
-  
-script:
-- ./gradlew build connectedCheck
+
+env:
+  global:
+    - ANDROID_API_LEVEL=27
+    - ANDROID_EMULATOR_LEVEL=21
+    - ANDROID_BUILD_TOOLS_VERSION=27.0.3
+    - ANDROID_ABI=armeabi-v7a
+    - ANDROID_TAG=google_apis
+    - ADB_INSTALL_TIMEOUT=20
