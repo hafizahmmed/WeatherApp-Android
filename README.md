@@ -11,4 +11,4 @@ This Android will been made for a school project where we had to learn (more) ab
 
 ### Authors
 
-Build with ❤ by <a href="https://www.luukkenselaar.nl/">Luuk Kenselaar</a> and <a href="https://github.com/Bjornzor">Bjorn</a>
+Build by <a href="https://www.luukkenselaar.nl/">Luuk Kenselaar</a> and <a href="https://github.com/bjornwelboren">Bjorn Welboren</a>
